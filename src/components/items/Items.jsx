@@ -13,6 +13,8 @@ class Items extends React.Component {
 	}
 
 	render() {
+console.error("enter render", config.items);
+
 		return (
 			<div className="items">
 				{ config.items.map(
