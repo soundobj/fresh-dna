@@ -2,6 +2,7 @@ import config from '../../config.json';
 
 export function fetchItem(id) {
 	return function (dispatch) {
+		dispatch({ type: "FETCH_ITEM_PENDING", payload: {} });
 		fetch(`${config.resourceUrl}${id}.json`, {
 		})
 			.then((response) => {

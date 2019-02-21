@@ -1,15 +1,15 @@
 import React from "react";
+import { Button } from 'react-bootstrap';
 import config from "../../config.json";
 
 class Items extends React.Component {
 	constructor(props) {
 		super(props);
 		this.handleGetItem.bind(this);
-		this.ref = React.createRef();
 	}
 
-	handleGetItem(id) {
-		this.props.fetchItem(id.currentTarget.childNodes[0].data);
+	handleGetItem(e) {
+		this.props.fetchItem(e.currentTarget.id);
 	}
 
 	render() {
@@ -18,12 +18,14 @@ class Items extends React.Component {
 				{ config.items.map(
 					(item) => {
 						return (
-							<a 	key={item}
+							<Button
+								key={item}
 								id={item}
+								disabled={this.props.fetching}
 								className="items__item"
 								onClick={(item) => this.handleGetItem(item)}>
-								{item}
-							</a>
+									{item}
+							</Button>
 						);
 					}
 				)}

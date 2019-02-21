@@ -7,7 +7,6 @@ import "./main.scss";
 import Icon from "./components/Icon.jsx";
 import Items from "./components/items/items-container.js";
 
-console.log("hello, world");
 const App = () => {
 	return (
 		<Provider store={store}>

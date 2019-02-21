@@ -4,7 +4,9 @@ import { fetchItem } from "./items-actions";
 
 const mapStateToProps = (state) => {
 	return {
-		items: state.items,
+		items: state.items.items,
+		fetching: state.items.fetching,
+		fetched: state.items.fetched,
 	};
 };
 
