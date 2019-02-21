@@ -1,0 +1,9 @@
+.items {
+	margin: 10px;
+	&__item {
+		display: block;
+		&:hover {
+			cursor: pointer;
+		}
+	}
+}

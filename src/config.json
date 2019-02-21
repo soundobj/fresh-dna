@@ -1,0 +1,9 @@
+{
+	"staticUrl": "http://localhost:3000/public/svg/",
+	"resourceUrl": "http://localhost:3000/db/",
+	"items" : [
+		"banana",
+		"carrot",
+		"tomato"
+	]
+}

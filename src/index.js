@@ -1,17 +1,20 @@
 import React, {Component} from "react";
+import { Provider } from "react-redux";
+import store from "./store.js"
 import ReactDOM from "react-dom";
 import "normalize.css";
 import "./main.scss";
 import Icon from "./components/Icon.jsx";
-import Test from "./components/Test.jsx";
+import Items from "./components/items/items-container.js";
 
 console.log("hello, world");
 const App = () => {
 	return (
-		<div className="wrapper">
-			<Test />
-			<Icon name="si-glyph-mushrooms" />
-		</div>
+		<Provider store={store}>
+			<div className="wrapper">
+				<Items />
+			</div>
+		</Provider>
 	)
 }
 const wrapper = document.getElementById("root");
