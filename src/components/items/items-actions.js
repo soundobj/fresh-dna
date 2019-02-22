@@ -3,7 +3,8 @@ import config from '../../config.json';
 export function fetchItem(id) {
 	return function (dispatch) {
 		dispatch({ type: "FETCH_ITEM_PENDING", payload: {} });
-		fetch(`${config.resourceUrl}${id}.json`, {
+		const url =`${config.resourceUrl}${id}.json`;
+		return fetch(url, {
 		})
 			.then((response) => {
 				return response.json();
