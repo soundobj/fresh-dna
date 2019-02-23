@@ -5,13 +5,13 @@ import ReactDOM from "react-dom";
 import "normalize.css";
 import "./main.scss";
 import Icon from "./components/Icon.jsx";
-import Items from "./components/items/items-container.js";
+import { ItemsConnect } from "./components/items/items-container.js";
 
 const App = () => {
 	return (
 		<Provider store={store}>
 			<div className="wrapper">
-				<Items />
+				<ItemsConnect />
 			</div>
 		</Provider>
 	)

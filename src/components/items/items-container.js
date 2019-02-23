@@ -14,4 +14,11 @@ const mapDispatchToProps = dispatch => ({
 	fetchItem: (id) => { dispatch(fetchItem(id)); },
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(Items);
+// export default connect(mapStateToProps, mapDispatchToProps)(Items);
+const ItemsConnect = connect(mapStateToProps, mapDispatchToProps)(Items);
+
+export {
+	ItemsConnect,
+	mapStateToProps,
+	mapDispatchToProps,
+}
