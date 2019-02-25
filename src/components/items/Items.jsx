@@ -8,8 +8,8 @@ class Items extends React.Component {
 		this.handleGetItem.bind(this);
 	}
 
-	handleGetItem(e) {
-		this.props.fetchItem(e.currentTarget.id);
+	handleGetItem(item) {
+		this.props.fetchItem(item);
 	}
 
 	render() {
@@ -23,7 +23,7 @@ class Items extends React.Component {
 								id={item}
 								disabled={this.props.fetching}
 								className="items__item"
-								onClick={(item) => this.handleGetItem(item)}>
+								onClick={(e) => this.handleGetItem(item, e)}>
 									{item}
 							</Button>
 						);
